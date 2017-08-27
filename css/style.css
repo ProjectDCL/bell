@@ -5413,6 +5413,7 @@ input[type="radio"]:checked + label:after {
     width: 100%;
 }
 
+
 .changer__city {
     width: 50%;
     display: flex;
@@ -5431,4 +5432,85 @@ input[type="radio"]:checked + label:after {
 
 .select2-search__field {
     height: 20px !important;
+}
+
+.changer__city-name {
+       font-family: Geometria-Bold, sans-serif;
+       font-size: 20px;
+}
+
+.changer__navigation{
+	display: flex;
+    justify-content: center;
+	width:100%;
+	list-style:none;
+	font-weight:bold;
+	margin-bottom:10px;
+    
+}
+.changer__navigation li{
+	float:left;
+	position:relative;
+	display:block;
+    
+}
+
+.changer__navigation li button{
+    outline: none !important;
+    border: 0 !important;
+    cursor: pointer;
+	display:block;
+	width: 150px;
+    height: 50px;
+	color:#fff;
+	background:#9b6bcc;
+	text-decoration:none;
+	
+
+
+}
+.changer__navigation li button:hover{
+	color:#fff;
+	background:#6b0c36;
+	background:rgba(107,12,54,0.75); /* Выглядит полупрозрачным */
+}
+
+/*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+.changer__navigation ul{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px;
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+	opacity:0; /* Устанавливаем начальное состояние прозрачности */
+	-webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+}
+.changer__navigation ul li{
+	float:none;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 500px;
+}
+.changer__navigation ul button{
+	white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+	display:block;
+}
+.changer__navigation li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+	left:0; /* Приносим его обратно на экран, когда нужно */
+	opacity:1; /* Делаем непрозрачным */
+}
+.changer__navigation li:hover button{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+	background:#6b0c36;
+	background:#9b6bcc; /* Выглядит полупрозрачным */
+}
+.changer__navigation li:hover ul button{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+	text-decoration:none;
+	-webkit-transition:-webkit-transform 0.075s linear;
+}
+.changer__navigation li:hover ul li button:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+	background:#333;
+	background:rgba(51,51,51,0.75); /* Будет полупрозрачным */
+	-moz-transform:scale(1.05);
+	-webkit-transform:scale(1.05);
 }

@@ -155,7 +155,7 @@
 			</div>
 		</div>
 	</header>
-    <div onload="drop()" class="container__shops">
+    <div class="container__shops">
         <div class="container__items-wrapper">
             <nav class="breadcrumbs">
 				<a href="">Главная</a> /
@@ -182,23 +182,65 @@
                         </div>
                         <div class="changer__shops-city">
                         <div class="changer__city">
-                            <select class="selector__cities">
-                                <button class="mix spb">Санкт-Петербург</button>
-                                <option class="mix ufa">Уфа</option>
-                            </select>
+
+                        <ul class="changer__navigation">
+                            <li>
+                                <button href="#" title="Выберите город.">Выберите город</button>
+                                <ul>
+                                    <li><button data-filter=".spb" href="#">Санкт-Пeтербург</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Уфа</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Екатеринбург</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Новокузнецк</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Краснодар</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Сочи</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Красноярск</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Москва</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Мурманск</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Нижний Новгород</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Новосибирск</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Орел</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Пермь</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Владивосток</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Ростов-на-Дону</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Рязань</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Самара</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Тольятти</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Ставрополь</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Казань</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Тверь</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Тула</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Нижневартовск</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Сургут</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Ижевск</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Челябинск</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Чебоксары</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Ярославль</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Белгород</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Волгоград</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Воронеж</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Липецк</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Курск</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Киров</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Кемерово</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Калининград</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Калуга</button></li>
+                                    <li><button data-filter= ".ufa" href="#">Иваново</button></li>
+                                </ul>
+                            </li>
+                        </ul>
                             </div>
                             <div class="changer__city-desc">
-                               <div class="mix ufa changer__desc-item" data-order="1">
-                                    <div class="changer__city-name">Уфа</div>
-                                    <div class="changer__city-mobile"><span class="shops__text-bold">Телефон:</span>+7(3472)14-93-45</div>
-                                    <div class="changer__city-adress"><span class="shops__text-bold">Адресс:</span>450075, Проспект Октября. д.111</div>
-                                    <div class=""></div>
-                                    <div class="changer__city-workingtime"><span class="shops__text-bold">Время работы магазина:</span> Понедельник-Воскресенье 8:00 - 20:00 Мск.</div>
-                                </div>
                                 <div class="mix spb changer__desc-item" data-order="2">
                                     <div class="changer__city-name">Санкт-Петербург</div>
                                     <div class="changer__city-mobile"><span class="shops__text-bold">Телефон:</span>+7(812)426-95-66</div>
                                     <div class="changer__city-adress"><span class="shops__text-bold">Адресс:</span>191119, Константина Заслонова, 5</div>
+                                    <div class=""></div>
+                                    <div class="changer__city-workingtime"><span class="shops__text-bold">Время работы магазина:</span> Понедельник-Воскресенье 8:00 - 20:00 Мск.</div>
+                                </div>
+                               <div class="mix ufa changer__desc-item" data-order="1">
+                                    <div class="changer__city-name">Уфа</div>
+                                    <div class="changer__city-mobile"><span class="shops__text-bold">Телефон:</span>+7(3472)14-93-45</div>
+                                    <div class="changer__city-adress"><span class="shops__text-bold">Адресс:</span>450075, Проспект Октября. д.111</div>
                                     <div class=""></div>
                                     <div class="changer__city-workingtime"><span class="shops__text-bold">Время работы магазина:</span> Понедельник-Воскресенье 8:00 - 20:00 Мск.</div>
                                 </div>
@@ -209,6 +251,7 @@
             </div>
         </div>
     </div>
+    				
 <footer>
 		<div class="footer">
 			<div class="wrap">
