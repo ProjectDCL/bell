@@ -820,6 +820,8 @@ button[type="submit"].search-btn .icon {
   border-bottom: 1px solid #ebebeb;
   height: 52px;
   text-align: center;
+  z-index: 101;
+  position: relative;
 }
 
 .menu > ul {
@@ -5405,7 +5407,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .changer__city-desc {
-    margin: 0 30px;
+    width: 50%;
 }
 
 #map {
@@ -5437,6 +5439,11 @@ input[type="radio"]:checked + label:after {
 .changer__city-name {
        font-family: Geometria-Bold, sans-serif;
        font-size: 20px;
+}
+
+.changer__desc-item {
+    max-width: 90%;
+    margin-bottom: 30px;
 }
 
 .changer__navigation{
@@ -5472,19 +5479,19 @@ input[type="radio"]:checked + label:after {
 .changer__navigation li button:hover{
 	color:#fff;
 	background:#6b0c36;
-	background:rgba(107,12,54,0.75); /* Выглядит полупрозрачным */
+	background:rgba(107,12,54,0.75);/
 }
 
-/*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+
 .changer__navigation ul{
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 500px;
 	list-style:none;
 	position:absolute;
-	left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
-	opacity:0; /* Устанавливаем начальное состояние прозрачности */
-	-webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+	left:-9999px;
+	opacity:0;
+	-webkit-transition:0.25s linear opacity;
 }
 .changer__navigation ul li{
 	float:none;
@@ -5493,24 +5500,118 @@ input[type="radio"]:checked + label:after {
     max-height: 500px;
 }
 .changer__navigation ul button{
-	white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+	white-space:nowrap;
 	display:block;
 }
-.changer__navigation li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
-	left:0; /* Приносим его обратно на экран, когда нужно */
-	opacity:1; /* Делаем непрозрачным */
+.changer__navigation li:hover ul{
+	left:0; 
+	opacity:1;
 }
-.changer__navigation li:hover button{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+.changer__navigation li:hover button{ 
 	background:#6b0c36;
-	background:#9b6bcc; /* Выглядит полупрозрачным */
+	background:#9b6bcc; 
 }
-.changer__navigation li:hover ul button{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+.changer__navigation li:hover ul button{ 
 	text-decoration:none;
 	-webkit-transition:-webkit-transform 0.075s linear;
 }
-.changer__navigation li:hover ul li button:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+.changer__navigation li:hover ul li button:hover{
 	background:#333;
-	background:rgba(51,51,51,0.75); /* Будет полупрозрачным */
+	background:rgba(51,51,51,0.75);
 	-moz-transform:scale(1.05);
 	-webkit-transform:scale(1.05);
+}
+
+.delivery__container {
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.delivery__table {
+    border: 1px solid #000;
+}
+
+.delivery__info {
+    margin: 50px 0;
+}
+
+.delivery__table-title {
+    font-family: Geometria-Bold, sans-serif;
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
+.delivery__methods {
+    margin: 50px 0;
+}
+
+.filters_block {
+    position: relative;
+    margin-bottom: 150px;
+}
+
+#menu {
+	display: flex;
+    z-index: 100;
+	width: auto;
+	margin:0 auto;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    font: normal 14px Helvetica, Arial, sans-serif
+}
+
+#menu li a {
+	display:block;
+    position: relative;
+	padding:10px 15px;
+	background: transparent;
+	text-decoration:none;
+    text-shadow: 0px 1px 1px #ffffff;
+	color:#606060
+}
+
+#menu li a:hover,
+#menu li a.active {
+	background: transparent;
+    text-shadow: 0px 1px 1px #ffffff;
+	color:#3b3b3b
+}
+
+#menu li ul {
+	display:none;
+    list-style: none;
+    margin: 0;
+    padding:0
+}
+
+#menu li ul li a {
+    font-size: 12px;
+	padding:8px 15px;
+	background:#ececec;
+	border-bottom:1px dotted #ccc
+}
+#menu li ul li a:after {
+    content: "»";
+    float: left;
+    margin-right:6px;
+    line-height: 1em
+}
+#menu li ul li a:hover,
+#menu li ul li a.active {
+    background:#dedede;
+    color:green;
+    padding-left:18px
+}
+
+.filters_block {
+    position: relative;
+}
+
+.filters__content {
+    position: absolute;
+    margin-top: 50px;
+    z-index: 100;
 }
