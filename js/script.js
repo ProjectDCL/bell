@@ -1010,4 +1010,69 @@ $(document).ready(function () {
            $(this).addClass('active');
         });
         });
+
+//City Form Changer Settings.
+
+$(document).ready(function(){
+    $('.city-link').on('click', function(){
+        $('.popup__cities').toggle();
+    });
     
+    
+});
+
+$(document).ready(function(){
+    $('.popup__close').on('click', function(){
+        $('.popup__cities').toggle();
+    });
+});
+
+$(document).ready(function(){
+    $('.popup__bg').on('click', function(){
+        $('.popup__cities').toggle();
+    });
+});
+
+ //Test owl. 
+
+var $carousel = $(".buyer__slider");
+$('owl-carousel').owlCarousel({
+    stagePadding: 50,
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+
+//My orders settings.
+
+document.addEventListener("DOMContentLoaded", function(){
+var main = document.querySelector('th input[type="checkbox"]'),
+    all = document.querySelectorAll('td input[type="checkbox"]');
+
+for(var i=0; i<all.length; i++) {  // 1 и 2 пункт задачи
+    all[i].onclick = function() {
+        var allChecked = document.querySelectorAll('td  [type="checkbox"]:checked').length;
+        main.checked = allChecked == all.length;
+        main.indeterminate = allChecked > 0 && allChecked < all.length;
+    }
+}
+
+
+main.addEventListener("click", function() {  // 3
+    for(var i=0; i<all.length; i++) {
+        all[i].checked = this.checked;
+    }
+});
+});
