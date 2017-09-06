@@ -4944,7 +4944,6 @@ input[type="radio"]:checked + label:after {
 }
 
 .popup__container {
-    height: 60vh;
     width: 65%;
     background: #fff;
     z-index: 203;
@@ -4954,6 +4953,7 @@ input[type="radio"]:checked + label:after {
     left: 50%;
     border-radius: 5px;
     padding: 30px;
+    height: auto !important;
 }
 
 
@@ -6150,7 +6150,6 @@ input[type="radio"]:checked + label:after {
     }
     
     .popup__container {
-        height: 80vh;
         width: 95%;
     }
     
@@ -6281,6 +6280,10 @@ input[type="radio"]:checked + label:after {
     
     .region {
         display: none;
+    }
+    
+    .popup__container {
+        min-height: 96vh;
     }
 }
 
@@ -6761,10 +6764,6 @@ input[type="radio"]:checked + label:after {
     
     .list-container {
         height: 250px;
-    }
-    
-    .popup__container {
-        height: 96vh;
     }
     
         .popup__content {
