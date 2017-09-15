@@ -6577,6 +6577,25 @@ input[type="radio"]:checked + label:after {
         display: none;
     }
     
+    .rev__main-content {
+        flex-direction: column;
+    }
+    
+    .reviews__line {
+        display: none;
+    }
+    
+    .reviews__text {
+        background: #fff !important;
+        color: #000 !important;
+    }
+    
+    .navcnt__ul {
+        max-width: 80%;
+        flex-wrap: wrap;
+        margin: 0 auto !important;
+    }
+    
 }
 
 @media screen and (max-width: 480px) {
