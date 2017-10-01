@@ -5026,6 +5026,9 @@ input[type="radio"]:checked + label:after {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.cart__body {
     overflow: hidden;
 }
 
@@ -5130,6 +5133,7 @@ input[type="radio"]:checked + label:after {
     display: flex;
     margin-top: 50px;
 }
+
 
 
 .reg__container-title {
@@ -7061,6 +7065,10 @@ input[type="radio"]:checked + label:after {
     .reviews__item {
         align-items: center;
     }
+    
+    .cart__body {
+    overflow: auto;
+}
     
 }
 
